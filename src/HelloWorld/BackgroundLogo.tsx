@@ -1,7 +1,14 @@
 import {Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import TrybeLogo from '../assets/trybe-logo.png';
+import TrybeBackgroundLogoWhite from '../assets/trybe-grafismo-branco.png';
+import TrybeBackgroundLogo from '../assets/trybe-grafismo.png';
 
-export const Logo: React.FC = () => {
+export const BackgroundLogo: React.FC<{color?: 'green' | 'white'}> = ({
+	color = 'green',
+}) => {
+	const trybeBackgroundLogo = {
+		green: TrybeBackgroundLogo,
+		white: TrybeBackgroundLogoWhite,
+	};
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
 
@@ -19,20 +26,21 @@ export const Logo: React.FC = () => {
 		<div
 			style={{
 				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
+				height: '100%',
 				width: '100%',
 			}}
 		>
 			<Img
 				style={{
 					position: 'absolute',
+					top: 0,
+					right: -20,
 					width: 'auto',
 					height: 600,
 					marginTop: -200,
 					transform: `scale(${scale})`,
 				}}
-				src={TrybeLogo}
+				src={trybeBackgroundLogo[color]}
 				alt="trybe rocket"
 			/>
 		</div>

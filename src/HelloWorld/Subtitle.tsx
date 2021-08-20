@@ -1,5 +1,4 @@
 import {interpolate, useCurrentFrame} from 'remotion';
-import {COLOR_1} from './config';
 
 export const Subtitle: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -7,7 +6,7 @@ export const Subtitle: React.FC = () => {
 	return (
 		<div
 			style={{
-				fontFamily: 'Helvetica, Arial',
+				fontFamily: 'Verdana',
 				fontSize: 40,
 				textAlign: 'center',
 				position: 'absolute',
@@ -16,15 +15,7 @@ export const Subtitle: React.FC = () => {
 				opacity,
 			}}
 		>
-			Edit{' '}
-			<code
-				style={{
-					color: COLOR_1,
-				}}
-			>
-				src/Video.tsx
-			</code>{' '}
-			and save to reload.
+			#vqv #fogueteNãoTemRé
 		</div>
 	);
 };
