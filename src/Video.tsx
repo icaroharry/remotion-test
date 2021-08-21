@@ -4,6 +4,7 @@ import {Logo} from './HelloWorld/Logo';
 import {Rocket} from './HelloWorld/Rocket';
 import {Subtitle} from './HelloWorld/Subtitle';
 import {Title} from './HelloWorld/Title';
+import {evaluation} from './data';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -18,6 +19,7 @@ export const RemotionVideo: React.FC = () => {
 				defaultProps={{
 					titleText: 'Projeto Concluído',
 					titleColor: '#2fc18c',
+					evaluation,
 				}}
 			/>
 			<Composition

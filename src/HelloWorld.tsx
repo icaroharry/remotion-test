@@ -9,7 +9,8 @@ import {Title} from './HelloWorld/Title';
 export const HelloWorld: React.FC<{
 	titleText: string;
 	titleColor: string;
-}> = ({titleText, titleColor}) => {
+	evaluation: Record<string, unknown>;
+}> = ({titleText, titleColor, evaluation}) => {
 	const frame = useCurrentFrame();
 	const videoConfig = useVideoConfig();
 
@@ -51,7 +52,7 @@ export const HelloWorld: React.FC<{
 					<Logo />
 				</Sequence>
 				<Sequence from={150} durationInFrames={150}>
-					<Project />
+					<Project evaluation={evaluation} />
 				</Sequence>
 				<Sequence from={150} durationInFrames={150}>
 					<BackgroundLogo color="white" />

@@ -1,7 +1,7 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {evaluation} from '../data';
 
-export const Project: React.FC = () => {
+export const Project: React.FC<{evaluation: Record<string, unknown>}> = ({evaluation}) => {
+	console.error(evaluation);
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
 	const opacity = interpolate(frame, [0, 5], [0, 1]);
