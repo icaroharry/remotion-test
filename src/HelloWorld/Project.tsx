@@ -58,8 +58,9 @@ export const Project: React.FC<{evaluation: Record<string, unknown>}> = ({evalua
 						);
 					})}
 			</h1>
+			<h2>{evaluation?.github_username}</h2>
 			<div>
-				{evaluation.evaluations.map((ev) => (
+				{evaluation?.evaluations?.map((ev) => (
 					<li>{ev?.description}</li>
 				))}
 			</div>

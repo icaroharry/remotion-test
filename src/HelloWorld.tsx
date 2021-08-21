@@ -14,6 +14,9 @@ export const HelloWorld: React.FC<{
 	const frame = useCurrentFrame();
 	const videoConfig = useVideoConfig();
 
+	const evaluationParse = typeof evaluation === 'string' ? JSON.parse(atob(evaluation)) : evaluation;
+
+
 	const opacity = interpolate(
 		frame,
 		[videoConfig.durationInFrames - 25, videoConfig.durationInFrames - 15],
@@ -52,7 +55,7 @@ export const HelloWorld: React.FC<{
 					<Logo />
 				</Sequence>
 				<Sequence from={150} durationInFrames={150}>
-					<Project evaluation={evaluation} />
+					<Project evaluation={evaluationParse} />
 				</Sequence>
 				<Sequence from={150} durationInFrames={150}>
 					<BackgroundLogo color="white" />
