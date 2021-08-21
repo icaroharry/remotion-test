@@ -6,7 +6,7 @@ export const Subtitle: React.FC = () => {
 	return (
 		<div
 			style={{
-				fontFamily: 'Verdana',
+				fontFamily: 'Epilogue',
 				fontSize: 40,
 				textAlign: 'center',
 				position: 'absolute',

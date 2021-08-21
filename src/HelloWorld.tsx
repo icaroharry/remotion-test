@@ -6,6 +6,8 @@ import {Rocket} from './HelloWorld/Rocket';
 import {Subtitle} from './HelloWorld/Subtitle';
 import {Title} from './HelloWorld/Title';
 
+import "./index.css";
+
 export const HelloWorld: React.FC<{
 	titleText: string;
 	titleColor: string;

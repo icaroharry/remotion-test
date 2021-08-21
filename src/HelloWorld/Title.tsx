@@ -10,7 +10,7 @@ export const Title: React.FC<{
 	return (
 		<h1
 			style={{
-				fontFamily: 'Verdana',
+				fontFamily: 'Epilogue',
 				fontWeight: 'bold',
 				fontSize: 100,
 				textAlign: 'center',
